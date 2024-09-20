@@ -138,4 +138,3 @@ git add .
 
 
 
-[x]-Git Commands
