@@ -133,3 +133,9 @@ To add all modified files at once:
 ```bash
 git add .
 ```
+
+
+
+
+
+[x]-Git Commands
