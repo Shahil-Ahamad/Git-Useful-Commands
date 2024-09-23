@@ -134,6 +134,11 @@ To add all modified files at once:
 git add .
 ```
 
+16. To Clone others Repository Codes
+
+```bash
+git clone <github-repo-link>
+```
 
 
 
