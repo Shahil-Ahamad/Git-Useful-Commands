@@ -1,145 +1,63 @@
-1. Initialize Git in Your Project
+<h1>**Git commands**</h1>
+--
 
-- Navigate to your project directory in the terminal and run:
+### Getting & Creating Projects
 
-```bash
-git init
-```
+| Command | Description |
+| ------- | ----------- |
+| `git init` | Initialize a local Git repository |
+| `git clone ssh://git@github.com/[username]/[repository-name].git` | Create a local copy of a remote repository |
 
-2. Configure Username & Email
+### Basic Snapshotting
 
-- Check your Git username and email:
+| Command | Description |
+| ------- | ----------- |
+| `git status` | Check status |
+| `git add [file-name.txt]` | Add a file to the staging area |
+| `git add -A` | Add all new and changed files to the staging area |
+| `git commit -m "[commit message]"` | Commit changes |
+| `git rm -r [file-name.txt]` | Remove a file (or folder) |
+| `git remote -v` | View the remote repository of the currently working file or directory |
 
-```bash
-git config user.name
-git config user.email
-```
+### Branching & Merging
 
-- If they are not set, you can set them using:
+| Command | Description |
+| ------- | ----------- |
+| `git branch` | List branches (the asterisk denotes the current branch) |
+| `git branch -a` | List all branches (local and remote) |
+| `git branch [branch name]` | Create a new branch |
+| `git branch -d [branch name]` | Delete a branch |
+| `git push origin --delete [branch name]` | Delete a remote branch |
+| `git checkout -b [branch name]` | Create a new branch and switch to it |
+| `git checkout -b [branch name] origin/[branch name]` | Clone a remote branch and switch to it |
+| `git branch -m [old branch name] [new branch name]` | Rename a local branch |
+| `git checkout [branch name]` | Switch to a branch |
+| `git checkout -` | Switch to the branch last checked out |
+| `git checkout -- [file-name.txt]` | Discard changes to a file |
+| `git merge [branch name]` | Merge a branch into the active branch |
+| `git merge [source branch] [target branch]` | Merge a branch into a target branch |
+| `git stash` | Stash changes in a dirty working directory |
+| `git stash clear` | Remove all stashed entries |
+| `git stash pop` | Apply latest stash to working directory |
 
-```bash
-git config --global user.name "<your_github_username>"
-git config --global user.email "<your_github_email>"
-```
+### Sharing & Updating Projects
 
-3. Check Project Status
+| Command | Description |
+| ------- | ----------- |
+| `git push origin [branch name]` | Push a branch to your remote repository |
+| `git push -u origin [branch name]` | Push changes to remote repository (and remember the branch) |
+| `git push` | Push changes to remote repository (remembered branch) |
+| `git push origin --delete [branch name]` | Delete a remote branch |
+| `git pull` | Update local repository to the newest commit |
+| `git pull origin [branch name]` | Pull changes from remote repository |
+| `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Add a remote repository |
+| `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Set a repository's origin branch to SSH |
 
-To see the status of your project (which files are tracked, untracked, or staged):
+### Inspection & Comparison
 
-```bash
-
-git status
-```
-
-4. Add Files to Staging Area
-
-- To add specific files to the staging area:
-
-```bash
-git add <file_or_folder_path>
-```
-
-- To add all files:
-
-```bash
-git add .
-```
-
-5. Commit Changes
-
-Commit the staged files with a message:
-
-```bash
-git commit -m "your commit message"
-```
-
-6. Amend Last Commit
-
-If you want to modify the message of your last commit:
-
-```bash
-git commit --amend
-```
-
-7. View Commit Logs
-
-To see the commit history in a simple one-line format:
-
-```bash
-git log --oneline
-```
-
-8. Add Remote Repository
-
-Connect your local repository to a remote GitHub repository:
-
-```bash
-git remote add origin <repository_url>
-```
-
-9. Check Branch Name
-
-To check the current branch name:
-
-```bash
-git branch
-```
-
-10. Rename Branch
-
-If you want to rename your current branch:
-
-```bash
-git branch -M <new_branch_name>
-```
-
-11. Push Changes to Remote
-
-Push your changes to a remote branch:
-
-```bash
-
-git push origin <branch_name>
-```
-
-12. Create and Switch to a New Branch
-
-To create and switch to a new branch:
-
-```bash
-git checkout -b <branch_name>
-```
-
-13. Switch to an Existing Branch
-
-To switch to an existing branch:
-
-```bash
-git checkout <branch_name>
-```
-
-14. Pull Latest Changes
-
-Pull the latest changes from the remote branch:
-
-```bash
-git pull origin <branch_name>
-```
-
-15. Add Multiple Files
-
-To add all modified files at once:
-
-```bash
-git add .
-```
-
-16. To Clone others Repository Codes
-
-```bash
-git clone <github-repo-link>
-```
-
-
-
-
+| Command | Description |
+| ------- | ----------- |
+| `git log` | View changes |
+| `git log --summary` | View changes (detailed) |
+| `git log --oneline` | View changes (briefly) |
+| `git diff [source branch] [target branch]` | Preview changes before merging |
