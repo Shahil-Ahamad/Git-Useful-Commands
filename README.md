@@ -1,5 +1,5 @@
-<h1>**Git commands**</h1>
---
+**<h1>Git commands</h1>**
+---
 
 ### Getting & Creating Projects
 
@@ -61,3 +61,5 @@
 | `git log --summary` | View changes (detailed) |
 | `git log --oneline` | View changes (briefly) |
 | `git diff [source branch] [target branch]` | Preview changes before merging |
+
+---
